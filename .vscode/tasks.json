@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build active file",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-DGLFW_STATIC",
+                "-I${workspaceFolder}/include",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/glad.c",
+                "-L${workspaceFolder}/lib",
+                "-mconsole",
+                "-o",
+                "${workspaceFolder}/physics_engine.exe",
+                "-lmingw32",
+                "-lglfw3", 
+                "-lopengl32",
+                "-lgdi32",
+                "-luser32",
+                "-lkernel32"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: C:/msys64/ucrt64/bin/g++.exe"
+        }
+    ]
+}
